@@ -1,0 +1,129 @@
+.pag-topo {
+    border: solid red 1px;
+    width: 99vw;
+    height: 10vh;
+}
+
+.pag-meio {}
+
+.pag-portfolio {
+    /* border: solid rgb(238, 255, 0) 5px; */
+}
+
+.pag-portfolio-perfil {
+    background-image: url("../img/luizinhovi.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+/* front end  ---------------------------*/
+.pag-front-circulo {
+    position: relative;
+    top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    /* border: solid blue 1px; */
+}
+
+.pag-front-circulo>div {
+
+    border: solid #727272 2px;
+    box-shadow: 0px 0px 5px 0px black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0);
+}
+
+.pag-front>a {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.pag-front-circulo>div>a>div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* back end  ---------------------------*/
+.pag-back-circulo {
+    position: relative;
+    top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    /* border: solid blue 1px; */
+}
+
+.pag-back-circulo>div {
+
+    border: solid #727272 2px;
+    box-shadow: 0px 0px 5px 0px black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0);
+}
+
+.pag-back>a {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.pag-back-circulo>div>a>div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+
+/* perfil do portifolio ------------ */
+.pag-portfolio-circulo {
+    position: relative;
+    top: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    /* border: solid blue 1px; */
+}
+
+
+
+.pag-portfolio-circulo>div {
+
+    border: solid #727272 1px;
+    box-shadow: 0px 0px 5px 0px black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0);
+}
+
+.pag-portfolio-circulo>div>a>div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* border: solid red 1px; */
+}
+
+
+
+.pag-final {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    bottom: 0vh;
+    justify-content: center;
+    background-color: rgb(141, 143, 141);
+    /* border: solid green 1px; */
+}

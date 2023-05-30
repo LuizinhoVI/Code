@@ -2,5 +2,6 @@
     "workbench.colorCustomizations": {
         "minimap.background": "#00000000",
         "scrollbar.shadow": "#ff0debb2"
-    }
+    },
+    "html.trace": "verbose"
 }
