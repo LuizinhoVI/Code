@@ -1,32 +1,16 @@
 .pag-topo {
     border: solid red 1px;
     width: 99vw;
-    height: 10vh;
+    height: 40px;
 }
 
-.pag-meio {}
-
-
-/* pagina do portifolio *************************** */
-.pag-portfolio {
-    /* border: solid rgb(238, 255, 0) 5px; */
+.pag-titulo {
+    font-size: 7vw;
+    position: absolute;
+    left: 5px;
+    cursor: pointer;
 }
-
-.pag-portfolio-perfil {
-    background-image: url("../img/luizinhovi.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.pag-titulo-portfolio {
-    /* border: solid red 1px; */
-    width: 95%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
+/* pag  do perfil  */
 
 /* front end  ---------------------------*/
 
@@ -35,7 +19,22 @@
     /* border: solid blue; */
     /* width: 80%; */
 
+}
 
+.pag-front>h2 {
+    position: relative;
+    top: -20px;
+    border: solid blue 1px;
+    /* width: 80%; */
+
+}
+
+.pag-front>div {
+    position: relative;
+    top: -40px;
+    border: solid blue 1px;
+    padding: 10px;
+    /* width: 80%; */
 
 }
 
@@ -177,6 +176,37 @@
     height: var(--altura-status);
     border-radius: 50%;
     /* border: solid red 1px; */
+}
+
+.pag-portfolio {
+    /* border: solid rgb(238, 255, 0) 7px; */
+}
+
+.pag-portfolio>h2 {
+    /* border: solid rgb(238, 255, 0) 7px; */
+    position: relative;
+    top: -15px;
+}
+
+.pag-portfolio>div {
+    /* border: solid rgb(255, 0, 0) 7px; */
+    position: relative;
+    top: -40px;
+}
+
+.pag-portfolio-perfil {
+    background-image: url("../img/luizinhovi.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pag-titulo-portfolio {
+    /* border: solid red 1px; */
+    width: 95%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
