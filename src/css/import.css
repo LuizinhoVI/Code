@@ -3,3 +3,10 @@
 @import url("projetos.css");
 @import url("default.css");
 @import url("instagram.css");
+
+
+:root {
+    /* cotrola a largura e altura das bolas do status */
+    --altura-status: 80px;
+    --largura-status: 80px;
+}

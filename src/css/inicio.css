@@ -6,6 +6,8 @@
 
 .pag-meio {}
 
+
+/* pagina do portifolio *************************** */
 .pag-portfolio {
     /* border: solid rgb(238, 255, 0) 5px; */
 }
@@ -17,74 +19,138 @@
     background-size: cover;
 }
 
+.pag-titulo-portfolio {
+    /* border: solid red 1px; */
+    width: 95%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 
 /* front end  ---------------------------*/
-.pag-front-circulo {
+
+.pag-front {
     position: relative;
-    top: 10px;
+    /* border: solid blue; */
+    /* width: 80%; */
+
+
+
+}
+
+.pag-front-circulo::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.pag-front-circulo {
+    overflow: auto;
+    height: 15%;
+    position: relative;
+    /* border: solid red 1px; */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(9, 30vw);
     justify-items: center;
-    /* border: solid blue 1px; */
+
+
+}
+
+.pag-front-circulo>div>a {
+
+    width: var(--largura-status);
+    height: var(--altura-status);
+    border-radius: 50%;
+    display: inline-block;
 }
 
 .pag-front-circulo>div {
 
+    position: relative;
+    top: 5px;
     border: solid #727272 2px;
     box-shadow: 0px 0px 5px 0px black;
-    width: 100px;
-    height: 100px;
+    width: var(--largura-status);
+    height: var(--altura-status);
     border-radius: 50%;
     background-color: rgba(255, 0, 0, 0);
 }
 
 .pag-front>a {
-    width: 100px;
-    height: 100px;
+    width: var(--largura-status);
+    height: var(--altura-status);
     border-radius: 50%;
 }
 
 .pag-front-circulo>div>a>div {
-    width: 100px;
-    height: 100px;
+    width: var(--largura-status);
+    height: var(--altura-status);
     border-radius: 50%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 /* back end  ---------------------------*/
-.pag-back-circulo {
+
+.pag-back {
     position: relative;
-    top: 10px;
+    /* border: solid blue; */
+    /* width: 80%; */
+
+
+
+}
+
+.pag-back-circulo::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.pag-back-circulo {
+    overflow: auto;
+    height: 15%;
+    position: relative;
+    /* border: solid red 1px; */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(9, 30vw);
     justify-items: center;
-    /* border: solid blue 1px; */
+
+
+}
+
+.pag-back-circulo>div>a {
+
+    width: var(--largura-status);
+    height: var(--altura-status);
+    border-radius: 50%;
+    display: inline-block;
 }
 
 .pag-back-circulo>div {
 
+    position: relative;
+    top: 5px;
     border: solid #727272 2px;
     box-shadow: 0px 0px 5px 0px black;
-    width: 100px;
-    height: 100px;
+    width: var(--largura-status);
+    height: var(--altura-status);
     border-radius: 50%;
     background-color: rgba(255, 0, 0, 0);
 }
 
 .pag-back>a {
-    width: 100px;
-    height: 100px;
+    width: var(--largura-status);
+    height: var(--altura-status);
     border-radius: 50%;
 }
 
 .pag-back-circulo>div>a>div {
-    width: 100px;
-    height: 100px;
+    width: var(--largura-status);
+    height: var(--altura-status);
     border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
 
 /* perfil do portifolio ------------ */
 .pag-portfolio-circulo {
@@ -96,34 +162,63 @@
     /* border: solid blue 1px; */
 }
 
-
-
 .pag-portfolio-circulo>div {
 
     border: solid #727272 1px;
     box-shadow: 0px 0px 5px 0px black;
-    width: 100px;
-    height: 100px;
+    width: var(--altura-status);
+    height: var(--largura-status);
     border-radius: 50%;
-    background-color: rgba(255, 0, 0, 0);
+    background-color: rgba(250, 9, 9, 0);
 }
 
 .pag-portfolio-circulo>div>a>div {
-    width: 100px;
-    height: 100px;
+    width: var(--largura-status);
+    height: var(--altura-status);
     border-radius: 50%;
     /* border: solid red 1px; */
 }
 
 
-
+/* pagina footer ***************************** */
 .pag-final {
-    position: fixed;
-    display: flex;
+    position: absolute;
     width: 100%;
-    height: 100px;
-    bottom: 0vh;
-    justify-content: center;
-    background-color: rgb(141, 143, 141);
-    /* border: solid green 1px; */
+    /* height: 100%; */
+    bottom: ;
+    /* background-color: rgb(141, 143, 141); */
+
+}
+
+.contato {
+    border: black solid 1px;
+    border-radius: 15px;
+    width: 25vh;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* buttons do whatsapp e instagram **** */
+.aperta {
+    background: hsl(340deg 100% 32%);
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+}
+
+.frente {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: hsl(345deg 100% 47%);
+    color: white;
+    transform: translateY(-6px);
+}
+
+.aperta:active .frente {
+    transform: translateY(-2px);
 }
