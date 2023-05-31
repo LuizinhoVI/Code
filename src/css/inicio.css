@@ -1,40 +1,87 @@
 .pag-topo {
-    border: solid red 1px;
+    /* border: solid red 1px; */
     width: 99vw;
     height: 40px;
+    border-bottom: solid rgba(0, 0, 0, 0.644) 5px;
+    box-shadow: 0px 0px 10px 0px black;
 }
 
 .pag-titulo {
-    font-size: 7vw;
-    position: absolute;
-    left: 5px;
+    font-size: 2.2em;
+    position: relative;
+    /* left: 5px; */
     cursor: pointer;
 }
+
 /* pag  do perfil  */
+.pag-perfil-foto {
+    background-image: url("../img/icon_code.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    /* background-color: red; */
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.pag-titulo-perfil {
+    position: relative;
+    top: 25px;
+    /* transform: translateY(-25%); */
+}
+
+.pag-titulo-perfil>label {
+    font-size: 0.9em;
+    /* border: solid red 1px; */
+}
+
+.pag-perfil {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* border: solid red 1px; */
+    height: 150px;
+}
+
 
 /* front end  ---------------------------*/
 
 .pag-front {
     position: relative;
-    /* border: solid blue; */
-    /* width: 80%; */
-
+    /* border: solid blue 1px; */
+    height: 150px;
 }
 
-.pag-front>h2 {
+.pag-front-seta>.esquerda {
     position: relative;
-    top: -20px;
-    border: solid blue 1px;
-    /* width: 80%; */
+    top: -30px;
+    right: 85vw;
 
 }
+
+.pag-front-seta {
+    position: relative;
+    /* align-items: left; */
+    /* border: solid blue; */
+    font-size: 20px;
+    width: 40px;
+    margin-left: 86vw;
+    top: -11vh;
+    opacity: 50%;
+}
+
+
 
 .pag-front>div {
     position: relative;
-    top: -40px;
-    border: solid blue 1px;
-    padding: 10px;
-    /* width: 80%; */
+    top: 5px;
+    /* border: solid blue 1px; */
+    /* padding: 10px; */
 
 }
 
@@ -45,11 +92,11 @@
 
 .pag-front-circulo {
     overflow: auto;
-    height: 15%;
+    height: 15vh;
     position: relative;
     /* border: solid red 1px; */
     display: grid;
-    grid-template-columns: repeat(9, 30vw);
+    grid-template-columns: repeat(var(--quantidade-front-end), 27vw);
     justify-items: center;
 
 
@@ -93,9 +140,8 @@
 
 .pag-back {
     position: relative;
-    /* border: solid blue; */
-    /* width: 80%; */
-
+    /* border: solid blue 1px; */
+    height: 130px;
 
 
 }
@@ -103,17 +149,20 @@
 .pag-back-circulo::-webkit-scrollbar {
     width: 0;
     height: 0;
+    /* border: solid red 1px; */
 }
 
 .pag-back-circulo {
     overflow: auto;
     height: 15%;
+    height: 110px;
     position: relative;
+    top: 10px;
     /* border: solid red 1px; */
     display: grid;
-    grid-template-columns: repeat(9, 30vw);
+    grid-template-columns: repeat(var(--quantidade-back-end), 30vw);
     justify-items: center;
-
+    /* border: solid red 1px; */
 
 }
 
@@ -123,25 +172,23 @@
     height: var(--altura-status);
     border-radius: 50%;
     display: inline-block;
+    /* border: solid red 1px; */
 }
 
 .pag-back-circulo>div {
-
+    /* border: solid red 1px; */
     position: relative;
-    top: 5px;
+    /* top: 5px; */
     border: solid #727272 2px;
     box-shadow: 0px 0px 5px 0px black;
     width: var(--largura-status);
     height: var(--altura-status);
     border-radius: 50%;
     background-color: rgba(255, 0, 0, 0);
+    top: 5px;
 }
 
-.pag-back>a {
-    width: var(--largura-status);
-    height: var(--altura-status);
-    border-radius: 50%;
-}
+
 
 .pag-back-circulo>div>a>div {
     width: var(--largura-status);
@@ -150,6 +197,27 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+.pag-back-seta>.esquerda {
+    position: relative;
+    top: -30px;
+    right: 85vw;
+}
+
+.pag-back-seta {
+    position: relative;
+    /* align-items: left; */
+    /* border: solid blue; */
+    font-size: 20px;
+    width: 40px;
+    left: 86vw;
+    top: -65px;
+    opacity: 50%;
+}
+
+
+
 
 /* perfil do portifolio ------------ */
 .pag-portfolio-circulo {
