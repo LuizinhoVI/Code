@@ -32,12 +32,12 @@
 
 .pag-titulo-perfil {
     position: relative;
-    top: 25px;
+    top: 15px;
     /* transform: translateY(-25%); */
 }
 
 .pag-titulo-perfil>label {
-    font-size: 0.9em;
+    font-size: 1.8vh;
     /* border: solid red 1px; */
 }
 
@@ -53,7 +53,7 @@
 
 .pag-front {
     position: relative;
-    /* border: solid blue 1px; */
+    /* border: solid rgb(255, 0, 0) 1px; */
     height: 150px;
 }
 
@@ -79,8 +79,9 @@
 
 .pag-front>div {
     position: relative;
-    top: 5px;
+    top: 2px;
     /* border: solid blue 1px; */
+    height: 130px;
     /* padding: 10px; */
 
 }
@@ -92,7 +93,7 @@
 
 .pag-front-circulo {
     overflow: auto;
-    height: 15vh;
+    height: 120px;
     position: relative;
     /* border: solid red 1px; */
     display: grid;
@@ -108,6 +109,13 @@
     height: var(--altura-status);
     border-radius: 50%;
     display: inline-block;
+}
+
+.pag-front-circulo>div>a>label {
+
+    position: relative;
+    top: 10px;
+    /* border: solid red 1px; */
 }
 
 .pag-front-circulo>div {
@@ -138,24 +146,23 @@
 
 /* back end  ---------------------------*/
 
-.pag-back {
-    position: relative;
-    /* border: solid blue 1px; */
-    height: 130px;
-
-
-}
-
 .pag-back-circulo::-webkit-scrollbar {
     width: 0;
     height: 0;
     /* border: solid red 1px; */
 }
 
+.pag-back {
+    position: relative;
+    /* border: solid blue 1px; */
+    height: 140px;
+
+}
+
 .pag-back-circulo {
     overflow: auto;
     height: 15%;
-    height: 110px;
+    height: 120px;
     position: relative;
     top: 10px;
     /* border: solid red 1px; */
@@ -172,6 +179,13 @@
     height: var(--altura-status);
     border-radius: 50%;
     display: inline-block;
+    /* border: solid red 1px; */
+}
+
+.pag-back-circulo>div>a>label {
+
+    position: relative;
+    top: 10px;
     /* border: solid red 1px; */
 }
 
@@ -246,9 +260,9 @@
     /* border: solid red 1px; */
 }
 
-.pag-portfolio {
-    /* border: solid rgb(238, 255, 0) 7px; */
-}
+/* .pag-portfolio {
+    border: solid rgb(238, 255, 0) 7px;
+} */
 
 .pag-portfolio>h2 {
     /* border: solid rgb(238, 255, 0) 7px; */
@@ -277,13 +291,12 @@
     transform: translateX(-50%);
 }
 
-
 /* pagina footer ***************************** */
 .pag-final {
     position: absolute;
     width: 100%;
     /* height: 100%; */
-    bottom: ;
+    
     /* background-color: rgb(141, 143, 141); */
 
 }

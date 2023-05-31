@@ -4,14 +4,16 @@
 @import url("default.css");
 @import url("front/instagram.css");
 @import url("back/instagram.css");
+@import url("../css/front/icones.css");
+@import url("../css/back/icones.css");
 
 :root {
     /* cotrola a largura e altura das bolas do status */
     --altura-status: 80px;
     --largura-status: 80px;
-    /* quantidade de arquivos no front end  */
+    /* quantidade de arquivos no front e back  */
     --quantidade-front-end: 5;
-    --quantidade-back-end: 4;
+    --quantidade-back-end: 3;
 }
 
 @media (min-width: 500px) {
