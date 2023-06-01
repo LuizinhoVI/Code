@@ -1,0 +1,86 @@
+/*todos os projetos de status */
+.pag-projeto-fullstack::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.pag-projeto-fullstack {
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(var(--total-projetos), 100px);
+    border: solid red 1px;
+    height: 120px;
+}
+
+.circulo-status {
+    display: inline-block;
+    position: relative;
+    width: var(--altura-status);
+    height: var(--largura-status);
+    border: solid blue 1px;
+    box-shadow: 0px 0px 8px 0px black;
+    /* background-color: red; */
+    border-radius: 100%;
+    left: 10px;
+    top: 5px;
+}
+
+.pag-projeto-1>div {
+    position: relative;
+    top: 90px;
+}
+
+/* nome do projetos  */
+.pag-projeto-nome {
+    display: grid;
+    grid-template-columns: 1fr 30vw;
+    position: relative;
+    top: 10px;
+    border: solid red 1px;
+}
+
+.pag-projeto-perfil {
+    background-image: url("../img/luizinhovi.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+
+}
+
+.pag-projeto-perfil>div {
+    position: relative;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50vw;
+    /* height: 30px; */
+    /* border: solid red; */
+
+}
+
+.pag-projeto-nome>nav {
+    position: relative;
+    top: 50%;
+    /* left: 10; */
+    transform: translateY(-50%);
+    /* border: solid red 1px; */
+    /* width: 100%; */
+    height: 20px;
+}
+
+
+
+/* pagina projeto para mostrar os arquivos  */
+
+.pag-projeto-mostrar {
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40vh;
+    position: relative;
+    border: solid red 1px;
+    top: 20px;
+}
