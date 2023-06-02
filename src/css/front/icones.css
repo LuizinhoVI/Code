@@ -1,19 +1,19 @@
-.pag-front-card01 {
+.pag-front-card {
     background-image: url("../../img/icones/front/card.jpg");
 }
 
-.pag-front-card02 {
+.pag-front-button {
     background-image: url("../../img/icones/front/buttons.jpg");
 }
 
-.pag-front-card03 {
+.pag-front-switches {
     background-image: url("../../img/icones/front/swithes.jpg");
 }
 
-.pag-front-card04 {
+.pag-front-form {
     background-image: url("../../img/icones/front/form.jpg");
 }
 
-.pag-front-card05 {
+.pag-front-loader {
     background-image: url("../../img/icones/front/loader.jpg");
 }

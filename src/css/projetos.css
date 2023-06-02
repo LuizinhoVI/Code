@@ -23,6 +23,9 @@
     border-radius: 100%;
     left: 10px;
     top: 5px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .pag-projeto-1>div {
@@ -124,9 +127,9 @@
 .pag-projeto-numero-arquivo {
     overflow: auto;
     display: grid;
-    grid-template-columns: repeat(12,40px);
+    grid-template-columns: repeat(12, 40px);
     position: relative;
-    top: 30px;
+    top: 8px;
     padding: 5px;
     /* border: solid red; */
     width: 80%;
@@ -134,12 +137,32 @@
     transform: translateX(-50%);
 }
 
+.pag-projeto-numero-setas::after {
+    content: "⬅️";
+    position: relative;
+    left: -10px;
+    top: 40px;
+    opacity: 50%;
+    z-index: 1;
+}
+
+.pag-projeto-numero-setas::before {
+    content: "➡️";
+    position: relative;
+    left: 93vw;
+    top: 40px;
+    z-index: 1;
+    opacity: 50%;
+}
+
+
+
 .pag-projeto-numero-button {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     height: 30px;
     width: 30px;
     border-radius: 100%;
