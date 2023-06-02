@@ -15,6 +15,7 @@
     --quantidade-front-end: 5;
     --quantidade-back-end: 3;
     --total-projetos: 8;
+    --quantidade-de-arquivos: 10;
 }
 
 @media (min-width: 500px) {

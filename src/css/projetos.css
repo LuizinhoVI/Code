@@ -14,6 +14,7 @@
 
 .circulo-status {
     display: inline-block;
+    cursor: pointer;
     position: relative;
     width: var(--altura-status);
     height: var(--largura-status);
@@ -127,7 +128,7 @@
 .pag-projeto-numero-arquivo {
     overflow: auto;
     display: grid;
-    grid-template-columns: repeat(12, 40px);
+    grid-template-columns: repeat(var(--quantidade-de-arquivos), 40px);
     position: relative;
     top: 8px;
     padding: 5px;
