@@ -1,7 +1,8 @@
 // variaveis globais dos arquivo/*style*/`
 const ligar = true;
 const desligar = false;
-var contagem = 0;
+var contador = 0; // contador do button 
+const total_button = 3; // contador do button
 const total_de_arquivos = 46; //arquivos totais
 
 
@@ -101,10 +102,10 @@ function button() {
 
 
 
-        proximo_voltar(nome_arquivo, pag_projeto,index);
         
         
     }
+    proximo_voltar(nome_arquivo, pag_projeto);
 }
     
 function switches() {
@@ -260,7 +261,7 @@ function numeros_buttons(numero,buttons,escolha) {
 // para poder avançar evoltar os projetos
 
 
-function proximo_voltar(nome_arquivo,pag_projeto,contator) {
+function proximo_voltar(nome_arquivo,pag_projeto) {
   
     
     
@@ -272,19 +273,33 @@ function proximo_voltar(nome_arquivo,pag_projeto,contator) {
 
         button.addEventListener("click", function (event) {
             
+
+            
             if (event.target === button) {
+
+                if (contador <= total_button) {
+                    
+             
+                nome_arquivo.textContent = "BUTTON " + contador + " ";
                 
-                nome_arquivo.textContent = "BUTTON " + contator + " ";
-                pag_projeto.src = "../arquivos/HTML_JS_CSS/BUTTON 0" + contator + "/";
+                
+                pag_projeto.src = "../arquivos/HTML_JS_CSS/BUTTON 0" + contador + "/";
                 // tem que seguir a mesma ordem de sequencia das pastas
 
 
     
-                numeros_buttons(ligar, desligar,contator);
+                numeros_buttons(ligar, desligar,contador);
                 
-                console.log(contator);
+                    console.log(contador);
+
+                    contador++;
+                } else {
+                    contador = 0;
+                }
                 
             }
+
+
 
         });
     
