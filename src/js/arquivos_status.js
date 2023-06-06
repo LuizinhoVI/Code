@@ -8,7 +8,24 @@ const total_de_arquivos = 46; //arquivos totais
 
 
 // variaveis dos nomes dos aquivos
+var arquivos = ["../arquivos/HTML_JS_CSS/BUTTON 0",
+                "../arquivos/HTML_JS_CSS/CARD 0",
+                "../arquivos/HTML_JS_CSS/FORMS 0",
+                "../arquivos/HTML_JS_CSS/INPUT 0", 
+                "../arquivos/HTML_JS_CSS/LOADER 0",
+                "../arquivos/HTML_JS_CSS/LOGIN  0",
+                "../arquivos/HTML_JS_CSS/Toggle switches 0",];
 
+var nome_arquivo_= ["BUTTON ",
+                    "CARD ",
+                    "SWITCHES ",
+                    "FORM ",
+                    "LOADER ",
+                    "BUTTON ",
+                    "BUTTON ",];
+
+
+//***************************************************** */
 
 function card() {
     let button = document.getElementsByClassName('pag-projeto-numero-button');
@@ -68,6 +85,7 @@ function button() {
     pag_projeto.src = "../arquivos/HTML_JS_CSS/BUTTON 00/index.html"
     nome_arquivo.textContent = "BUTTON 0"
 
+    contador = 0;
     
 
     numeros_buttons(ligar, ligar,0);
@@ -86,8 +104,8 @@ function button() {
         button[index].addEventListener("click", function (event) {
             
             if (event.target === button[index]) {
-                nome_arquivo.textContent = "BUTTON " + index + " ";
-                pag_projeto.src = "../arquivos/HTML_JS_CSS/BUTTON 0" + index + "/";
+                nome_arquivo.textContent = nome_arquivo_[0] + index + " ";
+                pag_projeto.src = arquivos[0] + index + "/";
                 // tem que seguir a mesma ordem de sequencia das pastas
 
 
@@ -105,6 +123,9 @@ function button() {
         
         
     }
+
+
+
     proximo_voltar(nome_arquivo, pag_projeto);
 }
     
@@ -277,13 +298,14 @@ function proximo_voltar(nome_arquivo,pag_projeto) {
             
             if (event.target === button) {
 
-                if (contador <= total_button) {
+                if (contador < total_button) {
                     
-             
-                nome_arquivo.textContent = "BUTTON " + contador + " ";
+                    contador++;
+                    
+                nome_arquivo.textContent = nome_arquivo_[0] + contador + " ";
                 
-                
-                pag_projeto.src = "../arquivos/HTML_JS_CSS/BUTTON 0" + contador + "/";
+                    pag_projeto.src = arquivos[0] + contador + "/";
+                    
                 // tem que seguir a mesma ordem de sequencia das pastas
 
 
@@ -292,9 +314,21 @@ function proximo_voltar(nome_arquivo,pag_projeto) {
                 
                     console.log(contador);
 
-                    contador++;
+                   
                 } else {
                     contador = 0;
+                    
+
+
+                    // vai criar um nome e adicionar um src no arquivo 
+
+                    nome_arquivo.textContent = nome_arquivo_[0] + contador + " ";
+                    pag_projeto.src = arquivos[0] + contador + "/";
+
+                    //****************************************** */
+
+                    numeros_buttons(ligar, desligar,contador);
+                    console.log("contador final "+contador);
                 }
                 
             }
