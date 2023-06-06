@@ -1,7 +1,7 @@
 // variaveis globais dos arquivo/*style*/`
 const ligar = true;
 const desligar = false;
-
+var contagem = 0;
 const total_de_arquivos = 46; //arquivos totais
 
 
@@ -59,7 +59,7 @@ function card() {
 function button() {
     let button = document.getElementsByClassName('pag-projeto-numero-button');
     let nome_arquivo = document.querySelector('.js_nome_arquivo')
-    let numeros = document.getElementsByClassName('pag-projeto-numero-button');
+   
     let pag_projeto = document.querySelector('.pag-projeto');
     let setas_numericas = document.querySelector(".pag-projeto-numero-setas");
    
@@ -82,9 +82,9 @@ function button() {
         
         
 
-        numeros[index].addEventListener("click", function (event) {
+        button[index].addEventListener("click", function (event) {
             
-            if (event.target === numeros[index]) {
+            if (event.target === button[index]) {
                 nome_arquivo.textContent = "BUTTON " + index + " ";
                 pag_projeto.src = "../arquivos/HTML_JS_CSS/BUTTON 0" + index + "/";
                 // tem que seguir a mesma ordem de sequencia das pastas
@@ -98,6 +98,12 @@ function button() {
             }
 
         });
+
+
+
+        proximo_voltar(nome_arquivo, pag_projeto,index);
+        
+        
     }
 }
     
@@ -254,10 +260,34 @@ function numeros_buttons(numero,buttons,escolha) {
 // para poder avançar evoltar os projetos
 
 
-function proximo_voltar() {
+function proximo_voltar(nome_arquivo,pag_projeto,contator) {
+  
+    
+    
+    let button = document.querySelector('.pag-projeto-direita');
+
+  
+ 
+    
+
+        button.addEventListener("click", function (event) {
+            
+            if (event.target === button) {
+                
+                nome_arquivo.textContent = "BUTTON " + contator + " ";
+                pag_projeto.src = "../arquivos/HTML_JS_CSS/BUTTON 0" + contator + "/";
+                // tem que seguir a mesma ordem de sequencia das pastas
 
 
+    
+                numeros_buttons(ligar, desligar,contator);
+                
+                console.log(contator);
+                
+            }
 
+        });
+    
     
     
 }

@@ -95,10 +95,10 @@
     border-radius: 20px;
 }
 
-.pag-projeto-esquerda {
+.pag-projeto-direita {
     
     border: solid blue 1px;
-    background-color: red;
+    background-color: rgb(255, 0, 221);
     position: absolute;
     right: -40px;
     width: 60px;
@@ -108,7 +108,7 @@
     cursor: pointer;
 }
 
-.pag-projeto-direita {
+.pag-projeto-esquerda {
     
     border: solid blue 1px;
     background-color: red;
