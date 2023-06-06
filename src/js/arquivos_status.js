@@ -247,3 +247,17 @@ function numeros_buttons(numero,buttons,escolha) {
     button[escolha].classList.add('pag-projeto-numero-button-on');
   
 }
+
+
+
+
+// para poder avançar evoltar os projetos
+
+
+function proximo_voltar() {
+
+
+
+    
+    
+}

@@ -96,7 +96,7 @@
 }
 
 .pag-projeto-esquerda {
-    content: '';
+    
     border: solid blue 1px;
     background-color: red;
     position: absolute;
@@ -109,7 +109,7 @@
 }
 
 .pag-projeto-direita {
-    content: '';
+    
     border: solid blue 1px;
     background-color: red;
     position: absolute;
