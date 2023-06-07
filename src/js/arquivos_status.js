@@ -287,6 +287,7 @@ function numeros_buttons(numero,buttons,escolha) {
   
 }
 
+
 // a função vai fazer usar as laterais da esquerda e direita funcionar contando os arquivos 
 function proximo_voltar(nome_arquivo,pag_projeto,numero_arquivo,contador,total_arquivo) {
 
