@@ -46,14 +46,16 @@
 .pag-inicio-front-end-status::-webkit-scrollbar {
     width: 0;
     height: 0;
+    
 }
 
 .pag-inicio-front-end-status {
     overflow: auto;
     height: 120px;
     position: relative;
-    border: solid red 1px;
+    /* border: solid red 1px; */
     display: grid;
+    border-radius: 12px;
     grid-template-columns: repeat(var(--quantidade-front-end), 27vw);
     justify-items: center;
 

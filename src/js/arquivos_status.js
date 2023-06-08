@@ -1,3 +1,5 @@
+
+
 const ligar = true;
 const desligar = false;
 var button_reset = 0; // contador do button 
@@ -41,9 +43,10 @@ function card() {
     let nome_arquivo = document.querySelector('.js_nome_arquivo')
     let pag_projeto = document.querySelector('.pag-projeto');
     let setas_numericas = document.querySelector(".pag-projeto-numero-setas");
- 
-  
-   
+
+
+
+
     pag_projeto.src = "../arquivos/HTML_JS_CSS/CARD 00/"
     nome_arquivo.textContent = "CARD 0 ";
     numeros_buttons(ligar, desligar,0,0);
@@ -407,4 +410,14 @@ function proximo_voltar(nome_arquivo,pag_projeto,numero_arquivo,contador,total_a
             pag_projeto_inicio.style.display = "none";
         
 }
-        
+
+
+
+console.log("função chamada");
+
+    
+    
+
+function card_inicio() {
+        alert()
+    }
