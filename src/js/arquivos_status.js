@@ -46,11 +46,10 @@ function card() {
    
     pag_projeto.src = "../arquivos/HTML_JS_CSS/CARD 00/"
     nome_arquivo.textContent = "CARD 0 ";
-
-    numeros_buttons(ligar, desligar,0);
+    numeros_buttons(ligar, desligar,0,0);
 
    
-   proximo_voltar(nome_arquivo,pag_projeto,1,button_reset,total_card)
+   proximo_voltar(nome_arquivo,pag_projeto,1,button_reset,total_card,0)
 
     // vai mostrar os botões das escolhas dos arquivos
     for (let index = 0; index < 10; index++) {
@@ -75,8 +74,8 @@ function card() {
 
 
 
-    proximo_voltar(nome_arquivo,pag_projeto,1,index,total_card)
-    numeros_buttons(ligar, desligar,index);
+    proximo_voltar(nome_arquivo,pag_projeto,1,index,total_card,0)
+    numeros_buttons(ligar, desligar,index,0);
   
   }
 
@@ -84,7 +83,6 @@ function card() {
     
     }
 }
-
 
 function button() {
 
@@ -98,9 +96,9 @@ function button() {
     nome_arquivo.textContent = "BUTTON 0"
 
 
-    numeros_buttons(ligar, ligar,0);
+    numeros_buttons(ligar, desligar,0,1);
     
-    proximo_voltar(nome_arquivo, pag_projeto, 0,button_reset,total_button);
+    proximo_voltar(nome_arquivo, pag_projeto, 0,button_reset,total_button,0);
     
 
     for (let index = 0; index < 4; index++) {
@@ -121,8 +119,8 @@ function button() {
 
 
     
-        proximo_voltar(nome_arquivo, pag_projeto, 0,index,total_button);
-                numeros_buttons(ligar, desligar,index);
+        proximo_voltar(nome_arquivo, pag_projeto, 0,index,total_button,1);
+                numeros_buttons(ligar, desligar,index,1);
                 
             } 
         });
@@ -142,8 +140,8 @@ function switches() {
     nome_arquivo.textContent = "SWITCHES 0"
   
 
-    proximo_voltar(nome_arquivo,pag_projeto,6,button_reset,total_switches)
-    numeros_buttons(ligar, ligar,0);
+    proximo_voltar(nome_arquivo,pag_projeto,6,button_reset,total_switches,2)
+    numeros_buttons(ligar, ligar,0,2);
     
 
     for (let index = 0; index < 6; index++) {
@@ -161,8 +159,8 @@ function switches() {
                 pag_projeto.src = arquivos[6] + index + "/"
                 // tem que seguir a mesma ordem de sequencia das pastas
 
-                proximo_voltar(nome_arquivo, pag_projeto, 6, index, total_switches);
-                 numeros_buttons(ligar, desligar,index);
+                proximo_voltar(nome_arquivo, pag_projeto, 6, index, total_switches,2);
+                 numeros_buttons(ligar, desligar,index,2);
     
             }
 
@@ -182,9 +180,9 @@ function form() {
     nome_arquivo.textContent = "FORMS 0"
     
 
-    proximo_voltar(nome_arquivo, pag_projeto, 2, button_reset, total_form);
+    proximo_voltar(nome_arquivo, pag_projeto, 2, button_reset, total_form,3);
     
-    numeros_buttons(ligar, ligar,0);
+    numeros_buttons(ligar, desligar,0,3);
     
     for (let index = 0; index < 6; index++) {
         button[index].style.display = "block";
@@ -204,15 +202,14 @@ function form() {
                 pag_projeto.src = arquivos[2] + index + "/"
                 // tem que seguir a mesma ordem de sequencia das pastas
             
-               proximo_voltar(nome_arquivo, pag_projeto, 2, index, total_form)
+               proximo_voltar(nome_arquivo, pag_projeto, 2, index, total_form,3)
                
-            numeros_buttons(ligar, desligar,index);
+            numeros_buttons(ligar, desligar,index,3);
     }
 
         });
     }
 }
-
 
 function loader() {
     let button = document.getElementsByClassName('pag-projeto-numero-button');
@@ -226,10 +223,10 @@ function loader() {
     nome_arquivo.textContent = "LOADER  0"
  
 
-    proximo_voltar(nome_arquivo,pag_projeto,4,button_reset,total_loader)
+    proximo_voltar(nome_arquivo,pag_projeto,4,button_reset,total_loader,4)
 
     // deixa todos os botões invisivel e mostrar só um 
-    numeros_buttons(ligar, ligar,0);
+    numeros_buttons(ligar, desligar,0,4);
     //************************************ */
 
     // mostra todos os botões numericos
@@ -249,8 +246,8 @@ function loader() {
                 pag_projeto.src = arquivos[4] + index + "/"
                // tem que seguir a mesma ordem de sequencia das pastas 
                
-           proximo_voltar(nome_arquivo,pag_projeto,4,index,total_loader)
-    numeros_buttons(ligar, desligar,index);
+           proximo_voltar(nome_arquivo,pag_projeto,4,index,total_loader,4)
+    numeros_buttons(ligar, desligar,index,4);
      }
 
         });
@@ -263,14 +260,18 @@ function loader() {
 
 
 // removedor de numeros e arquivos e buttons 
-function numeros_buttons(numero,buttons,escolha) {
+function numeros_buttons(numero, buttons, escolha,status) {
+
     let button = document.getElementsByClassName('pag-projeto-numero-button');
+
+    let button_status = document.getElementsByClassName('circulo-status');
     
+
 
     if (buttons) {
              //remover todos os botões numericos 
     for (let remover = 0; remover < button.length; remover++) {
-    button[remover].style.display = "none";
+        button[remover].style.display = "none";
         }
         
     }
@@ -278,18 +279,24 @@ function numeros_buttons(numero,buttons,escolha) {
  if (numero) {
       //remover todos os botões numericos pre-selecionados azuis 
     for (let remover_class = 0; remover_class < button.length; remover_class++) {
-    button[remover_class].classList.remove('pag-projeto-numero-button-on')
+        button[remover_class].classList.remove('pag-projeto-numero-button-on');
+          
+      }
+    for (let remover_class = 0; remover_class < button_status.length; remover_class++) {
+          button_status[remover_class].classList.remove('circulo-status-on');
       }
      
     }
     
     button[escolha].classList.add('pag-projeto-numero-button-on');
+
+    button_status[status].classList.add('circulo-status-on');
   
 }
 
 
 // a função vai fazer usar as laterais da esquerda e direita funcionar contando os arquivos 
-function proximo_voltar(nome_arquivo,pag_projeto,numero_arquivo,contador,total_arquivo) {
+function proximo_voltar(nome_arquivo,pag_projeto,numero_arquivo,contador,total_arquivo,status) {
 
     let button_direita = document.querySelector('.pag-projeto-direita');
     let button_esquerda = document.querySelector('.pag-projeto-esquerda');
@@ -316,9 +323,9 @@ function proximo_voltar(nome_arquivo,pag_projeto,numero_arquivo,contador,total_a
     
                     
                     
-                    numeros_buttons(ligar, desligar, contador);
+                    numeros_buttons(ligar, desligar, contador,status);
                     
-                console.log("contador final "+contador);
+             
                   
                 } else {
 
@@ -332,10 +339,10 @@ function proximo_voltar(nome_arquivo,pag_projeto,numero_arquivo,contador,total_a
 
                     //****************************************** */
 
-                    numeros_buttons(ligar, desligar, contador);
+                    numeros_buttons(ligar, desligar, contador,status);
                     
 
-                      console.log(contador);
+                      
                 }
                 
             }
@@ -357,11 +364,12 @@ function proximo_voltar(nome_arquivo,pag_projeto,numero_arquivo,contador,total_a
                     // tem que seguir a mesma ordem de sequencia das pastas
 
                     //trouxe a função para poder mostra-la
-                    numeros_buttons(ligar, desligar, contador);
+                    numeros_buttons(ligar, desligar, contador,status);
                     
-                console.log("contador final "+contador);
+             
                   
                 } else {
+
                     // coloca um limite dentro do contador final quando termina 
                     contador = total_arquivo;
 
@@ -373,10 +381,10 @@ function proximo_voltar(nome_arquivo,pag_projeto,numero_arquivo,contador,total_a
 
                     //****************************************** */
 
-                    numeros_buttons(ligar, desligar, contador);
+                    numeros_buttons(ligar, desligar, contador,status);
                     
 
-                      console.log(contador);
+                      
                 }
                 
             }
@@ -386,3 +394,17 @@ function proximo_voltar(nome_arquivo,pag_projeto,numero_arquivo,contador,total_a
     
     
  }
+
+
+
+    function home() { 
+            let projeto = document.querySelector('.projeto');
+            let inicio = document.querySelector('.home');
+            let pag_projeto_inicio = document.querySelector('.pag-projeto-inicio');
+            
+            projeto.style.display = "none";
+            inicio.style.display = "block";
+            pag_projeto_inicio.style.display = "none";
+        
+}
+        

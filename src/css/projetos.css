@@ -1,3 +1,26 @@
+/* projeto inicio */
+.pag-projeto-inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* margin-top: 10px; */
+    /* border: solid red 2px; */
+    height: 20px;
+    padding: 10px;
+}
+
+.pag-projeto-inicio>button {
+   background-color: white;
+   text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    border: solid rgb(0, 0, 0) 1px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 0PX 0px 10px 0px black;
+}
+
+
 /*todos os projetos de status *****************/
 .pag-projeto-fullstack::-webkit-scrollbar {
     width: 0;
@@ -28,6 +51,24 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.circulo-status-on {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    width: var(--altura-status);
+    height: var(--largura-status);
+    border: solid blue 1px;
+    box-shadow: 0px 0px 30px 0px rgb(3, 28, 255);
+    border: solid white 2px;
+    border-radius: 100%;
+    left: 10px;
+    top: 5px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 
 .pag-projeto-1>div {
     position: relative;
@@ -199,12 +240,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: blue;
+    color: white;
+    background-color: blue;
     height: 30px;
     width: 30px;
     border-radius: 100%;
-    border: solid rgb(6, 10, 245) 1px;
-    box-shadow: 0px 0px 5px 0px rgb(25, 39, 245);
+    border: solid white 3px;
+    box-shadow: 0px 0px 5px rgb(25, 39, 245);
 }
 
 /* texto do arquivo *********************** */
@@ -251,7 +293,7 @@ footer {
     top: 10px;
     /* border: solid red 1px; */
     box-shadow: 0px 0px 10px 0px black;
-    
+
 }
 
 footer>a {
@@ -266,7 +308,7 @@ footer>a {
 /* tema para fundo do site  */
 
 .pag-projeto-fundo {
-    border: solid red;
+    /* border: solid red; */
     top: 10px;
     height: 400px;
     position: relative;

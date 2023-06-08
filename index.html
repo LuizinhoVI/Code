@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/import.css">
+    <script src="src/js/arquivos_status.js"></script>
 
     <!-- <script src="src/js/arquivos_status.js"></script> -->
     <title>code programado</title>
@@ -17,7 +18,16 @@
             transform: translateX(-50%);
             width: 96vw;
             height: 100vh;
+
             /* border: solid rgb(223, 9, 223) 1px; */
+        }
+
+        .home {
+            display: none;
+        }
+
+        .projetos {
+            display: block;
         }
 
         body {
@@ -28,10 +38,13 @@
 
 <body>
 
-    <iframe class="topo" style="display: none;" src="src/pages/inicio.html" frameborder="0"></iframe>
+    <section class="pag-projeto-inicio">
+        <button align="center"  onclick="home()"> H O M E </button>
+    </section>
 
-    <iframe class="topo" style="display: block;" src="src/pages/projetos.html" frameborder="0"></iframe>
+    <iframe class="topo home" src="src/pages/inicio.html" frameborder="0"></iframe>
 
+    <iframe class="topo projeto" src="src/pages/projetos.html" frameborder="0"></iframe>
 
 
 
